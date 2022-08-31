@@ -1,0 +1,4 @@
+-clone project
+-remove useless files
+-structure project
+-setup global variables
