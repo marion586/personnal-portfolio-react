@@ -53,7 +53,7 @@ const Footer = () => {
     <footer>
       <a href="#home" className="footer__logo">
         {" "}
-        Marion
+        Marion menye Rakotomandimby
       </a>
 
       <ul className="permalinks">
