@@ -8,6 +8,7 @@ import Portfolio from "./Containers/Portfolio";
 import Testimonials from "./Containers/Testimonials";
 import Contact from "./Containers/Contact";
 import Footer from "./Containers/Footer";
+import "aos/dist/aos.css";
 
 const App = () => {
   return (

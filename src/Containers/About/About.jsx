@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
-import ME from "../../assets/me-about.jpg";
+import ME from "../../assets/smile.jpg";
 import { FaAward } from "react-icons/fa";
 import ButtonCustom from "../../Components/ButtonCustom";
 import { VscFolderLibrary } from "react-icons/vsc";
+import AOS from "aos";
 
-const about = () => {
+const About = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const aboutData = [
     {
       icon: <FaAward className="about__icon" />,
@@ -15,27 +20,28 @@ const about = () => {
     {
       icon: <FaAward className="about__icon" />,
       subtitle: "Clients",
-      content: "200 + worldwide",
+      content: "10+ worldwide",
     },
     {
       icon: <VscFolderLibrary className="about__icon" />,
       subtitle: "Projects",
-      content: "80+ Completed",
+      content: "10+ Completed",
     },
   ];
+
   return (
     <section id="about">
       <h5>Get to Know </h5>
       <h2>About Me</h2>
 
       <div className="container about__container">
-        <div className="about__me">
+        <div className="about__me" data-aos="fade-right">
           <div className="about__me-image">
-            <img src={ME} alt="about image" />
+            <img src={ME} alt="about imge" />
           </div>
         </div>
 
-        <div className="about__content">
+        <div className="about__content" data-aos="fade-left">
           <div className="about__cards">
             {aboutData.map((item, index) => (
               <article className="about__card" key={index}>
@@ -47,10 +53,9 @@ const about = () => {
           </div>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic amet
-            quos modi quasi consequatur itaque nihil explicabo quam quisquam
-            asperiores repudiandae quod quidem, excepturi autem tempore
-            consectetur iste voluptatibus! Omnis.
+            Throughout my 5 years of study as a software developer, I focused on
+            developing scalable and welldocumented code. I like to work in
+            collaboration but I can also manage projects independently
           </p>
           <ButtonCustom
             href="#contact"
@@ -63,4 +68,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

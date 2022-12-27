@@ -3,7 +3,6 @@ import "./style.css";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("home");

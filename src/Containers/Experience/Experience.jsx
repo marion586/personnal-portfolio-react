@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import AOS from "aos";
 const Experience = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const XPlevel = ["Experienced", "Intermediate", "Basic"];
   const fontendData = [
     {
@@ -69,8 +74,8 @@ const Experience = () => {
     },
     {
       icon: <BsPatchCheckFill />,
-      name: "Python",
-      level: XPlevel[3],
+      name: "PHP",
+      level: XPlevel[1],
     },
     {
       icon: <BsPatchCheckFill />,
@@ -84,7 +89,7 @@ const Experience = () => {
       <h2>My Experince</h2>
 
       <div className="container experience__container">
-        <div className="experience__frontend">
+        <div className="experience__frontend" data-aos="zoom-in">
           <h3>Fontend Development</h3>
           <div className="experience__content">
             {fontendData.map((item) => (
@@ -101,7 +106,7 @@ const Experience = () => {
 
         {/* end of frontend */}
 
-        <div className="experience__backend">
+        <div className="experience__backend" data-aos="zoom-in">
           <h3>Backend Development</h3>
           <div className="experience__content">
             {backendData.map((item) => (

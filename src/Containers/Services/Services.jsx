@@ -1,87 +1,95 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import { BiCheck } from "react-icons/bi";
+import AOS from "aos";
 const Services = () => {
-  const uiDesign = [
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const backend = [
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Database design and management.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Server-side scripting.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "API development.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Server configuration and deployment.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Security.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Performance optimization.",
+    },
+    {
+      item: "Maintenance and support.",
+    },
+    {
+      item: "Integration with third-party systems.",
     },
   ];
 
-  const webDevelloppement = [
+  const frontend = [
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Design and layout with the designer",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "HTML, CSS, and JavaScript development.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Responsive design.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Performance optimization.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Accessibility",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-    },
-    {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-    },
-    {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Testing and debugging Application.",
     },
   ];
   const contentCreation = [
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Writing and editing.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Graphic design.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Video production.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Audio production.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Photography.",
     },
     {
-      item: "Lorem ipsum dolor sit amet consectetur adipisicing.",
+      item: "Search engine optimization (SEO).",
+    },
+    {
+      item: "Social media management.",
     },
   ];
   return (
     <section id="services">
-      <h5>I what i offer</h5>
+      <h5>What i offer</h5>
       <h2>services</h2>
 
       <div className="container services__container">
-        <article className="service">
+        <article className="service" data-aos="zoom-in">
           <div className="service__head">
-            <h3>UI/UX Design</h3>
+            <h3>Back-end Developpement</h3>
           </div>
 
           <ul className="service__list">
-            {uiDesign.map((item, index) => (
+            {backend.map((item, index) => (
               <li key={index}>
                 <BiCheck className="service__list-icon" />
                 <p>{item.item}</p>
@@ -89,13 +97,13 @@ const Services = () => {
             ))}
           </ul>
         </article>
-        <article className="service">
+        <article className="service" data-aos="zoom-in">
           <div className="service__head">
-            <h3>Web Developpement</h3>
+            <h3>Front-end Developpement</h3>
           </div>
 
           <ul className="service__list">
-            {webDevelloppement.map((item, index) => (
+            {frontend.map((item, index) => (
               <li key={index}>
                 <BiCheck className="service__list-icon" />
                 <p>{item.item}</p>
@@ -103,7 +111,7 @@ const Services = () => {
             ))}
           </ul>
         </article>
-        <article className="service">
+        <article className="service" data-aos="zoom-in">
           <div className="service__head">
             <h3>Content Création</h3>
           </div>

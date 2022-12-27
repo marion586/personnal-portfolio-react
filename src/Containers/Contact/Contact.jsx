@@ -2,15 +2,22 @@ import "./style.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import { BsWhatsapp } from "react-icons/bs";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
-
+import { TailSpin } from "react-loader-spinner";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from "aos";
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const form = useRef();
+  const [btnactive, setBtnactive] = useState(false);
   const sendEmail = (e) => {
+    setBtnactive(true);
     e.preventDefault();
 
     emailjs
@@ -22,7 +29,6 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result);
           const notify = () =>
             toast.success("Email sent successfully", {
               position: toast.POSITION.BOTTOM_RIGHT,
@@ -34,6 +40,7 @@ const Contact = () => {
               progress: undefined,
             });
           notify();
+          setBtnactive(false);
         },
         (error) => {
           console.log(error.text);
@@ -48,6 +55,7 @@ const Contact = () => {
               progress: undefined,
             });
           notify();
+          setBtnactive(false);
         }
       );
   };
@@ -79,7 +87,7 @@ const Contact = () => {
       <h5>Get in Touch</h5>
       <h2>Contact Me </h2>
 
-      <div className="container contact__container">
+      <div className="container contact__container" data-aos="zoom-in">
         <div className="contact__options">
           {contactData.map(
             ({ icon, title, href, subtitle, linkContent }, index) => (
@@ -113,7 +121,22 @@ const Contact = () => {
           ></textarea>
 
           <button type="submit" className="btn btn-contact btn-primary">
-            Send Message
+            <div className="btn-grp">
+              {btnactive && (
+                <TailSpin
+                  height="40"
+                  width="40"
+                  color="#4fa94d"
+                  ariaLabel="tail-spin-loading"
+                  radius="1"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                  visible={true}
+                />
+              )}
+
+              <span>Send Message</span>
+            </div>
           </button>
         </form>
         <ToastContainer />

@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.css";
 import AVTR1 from "../../assets/avatar1.jpg";
 import AVTR2 from "../../assets/avatar2.jpg";
 import AVTR3 from "../../assets/avatar3.jpg";
-import AVTR4 from "../../assets/avatar4.jpg";
+import AOS from "aos";
+
 // Import Swiper React components
 import SwiperCore, { Pagination, A11y, Autoplay } from "swiper";
 
@@ -16,42 +17,29 @@ import "swiper/css/pagination";
 SwiperCore.use([Autoplay]);
 
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   const testimonialData = [
     {
       img: AVTR1,
       names: "Ernest Achiever",
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed
-              aspernatur perspiciatis ex sint officia ad, nulla vero, ab sit
-              nostrum illo delectus eligendi, nisi nihil excepturi temporibus
-              dolore doloribus.`,
+      review: `I would like to thank all of the team for the hard work over the years, they have always responded quickly by solving any issue that our company have had. Such as implementing new projects, software, updates, quickly and effectively, and many other issues even general enquiries that we may have had..`,
     },
     {
       img: AVTR2,
       names: "Ernest Achiever",
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed
-              aspernatur perspiciatis ex sint officia ad, nulla vero, ab sit
-              nostrum illo delectus eligendi, nisi nihil excepturi temporibus
-              dolore doloribus.`,
+      review: `Extremely helpful, user-friendly, innovative and reliable. Very satisfactory outcome, knowing that I can go back to them at any time for further help.`,
     },
     {
       img: AVTR3,
       names: "Ernest Achiever",
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed
-              aspernatur perspiciatis ex sint officia ad, nulla vero, ab sit
-              nostrum illo delectus eligendi, nisi nihil excepturi temporibus
-              dolore doloribus.`,
-    },
-    {
-      img: AVTR4,
-      names: "Ernest Achiever",
-      review: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed
-              aspernatur perspiciatis ex sint officia ad, nulla vero, ab sit
-              nostrum illo delectus eligendi, nisi nihil excepturi temporibus
-              dolore doloribus.`,
+      review: `I wanted to thank the team at The Web  for all their help to design and build my website and to look after all the marketing. I have daily compliments about how nice it looks and how easy it is to use. I would recommend them to anyone wanting to have an online presence.`,
     },
   ];
   return (
-    <section id="testmonials">
+    <section id="testmonials" data-aos="zoom-in">
       <h5>Review from clients</h5>
       <h2>Testimonials</h2>
 

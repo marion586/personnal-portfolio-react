@@ -24,6 +24,10 @@
   overflow: hidden;
   transform: rotate(10deg);
   transition: var(--transition);
+  height: 100%;
+}
+.about__me-image img {
+  height: 100%;
 }
 .about__me-image:hover {
   transform: rotate(0);

@@ -67,6 +67,11 @@ textarea {
   border: 2px solid var(--color-primary) !important;
   color: var(--color-light) !important;
 }
+.btn-grp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /* =============== MEDIA WUERIES MEDIUM DEVICES */
 
