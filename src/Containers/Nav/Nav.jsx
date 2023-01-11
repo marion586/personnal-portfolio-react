@@ -25,7 +25,7 @@ const Nav = () => {
       icon: <RiServiceLine />,
     },
     {
-      href: "#contact",
+      href: "#testmonials",
       icon: <BiMessageSquareDetail />,
     },
   ];

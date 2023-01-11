@@ -29,10 +29,6 @@ const Footer = () => {
       name: "Testimonials",
       href: "#testimonials",
     },
-    {
-      name: "Contact",
-      href: "#contact",
-    },
   ];
 
   const socialData = [

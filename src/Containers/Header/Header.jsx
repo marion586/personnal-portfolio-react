@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import "./style.css";
-import CTA from "../CTA";
+// import CTA from "../CTA";
 import Me from "../../assets/menye.png";
 import HeaderSocial from "../../Components/HederSocial/HeaderSocial";
 import AOS from "aos";
+
 const Header = () => {
   useEffect(() => {
     AOS.init();
@@ -15,7 +16,7 @@ const Header = () => {
         <h1>RAKOTOMANDIMBY </h1>
         <h1>Menye Marion</h1>
         <h5 className="text-light"> Fullstack JS Developper</h5>
-        <CTA />
+        {/* <CTA /> */}
         <HeaderSocial />
 
         <div className="me" data-aos="zoom-in">

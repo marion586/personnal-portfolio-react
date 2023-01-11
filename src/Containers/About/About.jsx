@@ -20,7 +20,7 @@ const About = () => {
     {
       icon: <FaAward className="about__icon" />,
       subtitle: "Clients",
-      content: "10+ worldwide",
+      content: "2+ worldwide",
     },
     {
       icon: <VscFolderLibrary className="about__icon" />,
@@ -57,11 +57,11 @@ const About = () => {
             developing scalable and welldocumented code. I like to work in
             collaboration but I can also manage projects independently
           </p>
-          <ButtonCustom
+          {/* <ButtonCustom
             href="#contact"
             className="btn btn-primary"
             Text="let's talk"
-          />
+          /> */}
         </div>
       </div>
     </section>

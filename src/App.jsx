@@ -6,13 +6,14 @@ import Experience from "./Containers/Experience";
 import Services from "./Containers/Services";
 import Portfolio from "./Containers/Portfolio";
 import Testimonials from "./Containers/Testimonials";
-import Contact from "./Containers/Contact";
+import NavMenu from "./Containers/NavMenu/NavMenu";
 import Footer from "./Containers/Footer";
 import "aos/dist/aos.css";
 
 const App = () => {
   return (
     <>
+      <NavMenu />
       <Header />
       <Nav />
       <About />
@@ -20,7 +21,7 @@ const App = () => {
       <Services />
       <Portfolio />
       <Testimonials />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </>
   );
