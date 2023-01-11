@@ -59,7 +59,7 @@ const Experience = () => {
     },
     {
       icon: <BsPatchCheckFill />,
-      name: "PostGresSql",
+      name: "PostGresql",
       level: XPlevel[2],
     },
     {
@@ -69,7 +69,7 @@ const Experience = () => {
     },
     {
       icon: <BsPatchCheckFill />,
-      name: "Node Js",
+      name: "NodeJs",
       level: XPlevel[0],
     },
     {
